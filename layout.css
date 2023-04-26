@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-style: none;
+}
+/* 반응형은 viewport의 너비를 파악한다. */
+/* css 를 너비에 맞게 수정한다 */
+/* pc -> 노트북 -> 타블렛 -> 모바일 순 (큰 -> 작은) */
+
+.wrap {
+}
+.inner {
+  display: block;
+  /* 너비를 max-width로 준다(최대너비) */
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+/* 가로 너비(Viewport Width)를 이용한 세로 비율 변경 적용하기 */
+.slide {
+  width: 100%;
+  /* viewport의 너비(vw)를 기준으로 비율을 잡음 */
+  /* viewport의 높이(vh)를 기준으로 하지는 않음 */
+  height: 31.25vw;
+  /* 높이를 맥시멈 400px이상 커지지않게 설정*/
+  max-height: 400px;
+  background: url("/images/live4.jpg") no-repeat center;
+}
+
+.layout {
+}
+.left {
+  float: left;
+  width: 50%;
+  height: 400px;
+  background: orange;
+}
+.right {
+  float: left;
+  width: 50%;
+  height: 400px;
+  background: greenyellow;
+}
+
+/* 너비변화에 따른 높이변화(배치 후 내용물 확인하면서 너비높이 조절하기) */
+@media screen and (max-width: 1024px) {
+  .left {
+    height: 300px;
+  }
+  .right {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .left {
+    height: 250px;
+  }
+  .right {
+    height: 250px;
+  }
+}
+/* 차라리 한줄로 정렬하자 */
+@media screen and (max-width: 775px) {
+  .left {
+    width: 100%;
+    height: 400px;
+  }
+  .right {
+    width: 100%;
+    height: 400px;
+  }
+}

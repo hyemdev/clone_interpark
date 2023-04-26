@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import url("font.css");
 
-
 /* 초기화 */
 * {
   padding: 0;
@@ -47,10 +46,28 @@ body {
   position: relative;
 
   /* rem 활용하여 사이즈 지정하기 */
-  width: 128rem;
+  /* max-width 반응형 */
+  max-width: 1280px;
 
   /* block 중앙에 두기 */
   margin: 0 auto;
+}
+
+/* 반응형 적용 */
+@media screen and (max-width: 1280px) {
+  .inner {
+    max-width: 1024px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .inner {
+    max-width: 760px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .inner {
+    max-width: 100%;
+  }
 }
 
 .clearfix::after {
@@ -191,7 +208,6 @@ body {
   background: url("../images/icon_linkArrow.svg") no-repeat center;
   margin-left: 3px;
 }
-
 
 /* 우측하단 고정 광고 */
 /* html 플라잉 배너 */
@@ -427,6 +443,13 @@ body {
   font-weight: 600;
 }
 
+.mb-mypage {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+
 .header-down {
 }
 
@@ -486,6 +509,76 @@ body {
   width: 1px;
   height: 16px;
   background: rgba(0, 0, 0, 0.2);
+}
+
+/* header 반응형 적용 */
+@media screen and (max-width: 1024px) {
+  .header {
+    border-bottom: 1px solid #f0f4f4;
+  }
+  .header .inner {
+    padding-top: 15px;
+    height: 230px;
+  }
+  /* 서치창 중앙정렬을 위해 너비100%설정 */
+  .header-left {
+    width: 100%;
+  }
+  .logo {
+    width: 77px;
+    height: 18px;
+    margin-left: 15px;
+  }
+  .search {
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* 기존의 list를 없애고 새로운 모양으로 변경해야함 */
+  .member-list {
+    display: none;
+  }
+  /* service-list 중앙정렬하기 */
+  /* service-list를 inline-block으로 설정하고, 텍스트중앙정렬한다 
+  (service-list의 너비를 지정하지않았으므로 margin: 0 auto;를 쓸수없음) */
+  /* float:left되어있는걸 없앰 */
+  .mb-mypage {
+    display: block;
+  }
+  .header-down {
+    text-align: center;
+  }
+  .header-right {
+  }
+  .service-list {
+    display: inline-block;
+    float: none;
+    margin-top: 0;
+  }
+  .service-list li {
+    padding-right: 20px;
+  }
+  /* 블록으로 한줄내림하도록 지정함 */
+  .service-list li a img {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+  }
+  .service-list li a {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  /* 여백조절 */
+  .service-list li:last-child {
+    margin-right: 0;
+  }
+
+  /* 안보이게 없앰 */
+  .service-menu {
+    display: none;
+  }
 }
 
 /* 추천이벤트 */
