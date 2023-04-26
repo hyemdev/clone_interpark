@@ -95,18 +95,18 @@ body {
 .sw-next {
   position: absolute;
   top: 50%;
+  right: 0;
   /* 버튼 중앙에 위치하기 */
   transform: translate(50%, -50%);
-  right: 0;
   z-index: 99;
 }
 
 .sw-prev {
   position: absolute;
   top: 50%;
+  left: 0;
   /* 버튼 중앙에 위치하기 */
   transform: translate(-50%, -50%);
-  left: 0;
   z-index: 99;
 }
 .sw-bt::before {
@@ -207,6 +207,29 @@ body {
   height: 11px;
   background: url("../images/icon_linkArrow.svg") no-repeat center;
   margin-left: 3px;
+}
+
+/* 텍스트 반응형 */
+@media screen and (max-width: 1280px) {
+  .section-top {
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section-top {
+  }
+  .section-top > h2 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+  .section-top > p {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .section-top {
+  }
 }
 
 /* 우측하단 고정 광고 */
@@ -404,12 +427,12 @@ body {
 }
 
 .mypage {
-  z-index: 999999;
   display: none;
   /* 위로 올라가서 기준점(position) 잡아서 내려오기 */
   position: absolute;
   top: 20px;
   right: 0;
+  z-index: 999999;
   background: #fff;
   padding: 20px;
   border-radius: 13px;
@@ -444,10 +467,10 @@ body {
 }
 
 .mb-mypage {
-  position: absolute;
-  right: 10px;
-  top: 10px;
   display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .header-down {
@@ -514,7 +537,7 @@ body {
 /* header 반응형 적용 */
 @media screen and (max-width: 1024px) {
   .header {
-    border-bottom: 1px solid #f0f4f4;
+    border-bottom: 8px solid #f0f4f4;
   }
   .header .inner {
     padding-top: 15px;
@@ -561,9 +584,9 @@ body {
   }
   /* 블록으로 한줄내림하도록 지정함 */
   .service-list li a img {
+    display: block;
     width: 48px;
     height: 48px;
-    display: block;
     margin: 0 auto;
   }
   .service-list li a {
@@ -589,6 +612,11 @@ body {
 .promotion .inner {
   height: 345px;
 }
+.promotion .section-top {
+  display: none;
+  padding-bottom: 20px;
+}
+
 .promotion-slide {
   /* 이너의 높이에 따라 움직이도록 %로 기입 */
   height: 100%;
@@ -601,6 +629,35 @@ body {
 .sw-promotion a img {
   width: 100%;
   height: auto;
+}
+/* 추천이벤트 반응형 적용 */
+@media screen and (max-width: 1240px) {
+  .promotion .inner {
+    height: 275px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .promotion {
+    border-bottom: 8px solid #f0f4f4;
+  }
+  .promotion .inner {
+    height: 200px;
+  }
+  .promotion .section-top {
+    display: block;
+  }
+  .sw-prom .promotion .sw-bt {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .promotion .inner {
+    height: 190px;
+  }
+  .sw-promotion {
+    width: 280px;
+  }
 }
 
 /* 쇼핑추천 */
@@ -1265,9 +1322,9 @@ body {
 .company-info li span {
 }
 .company-info li span.f-line::after {
-  content: "";
-  position: relative;
   display: inline-block;
+  position: relative;
+  content: "";
   width: 1px;
   height: 10px;
   background: #b2b2b2;

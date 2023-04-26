@@ -122,7 +122,9 @@
                 </li>
               </ul>
 
-              <a href="#" class="mb-mypage"><img src="images/icon_mypage.svg" alt="마이페이지"></a>
+              <a href="#" class="mb-mypage"
+                ><img src="images/icon_mypage.svg" alt="마이페이지"
+              /></a>
             </div>
           </div>
           <div class="header-down">
@@ -169,6 +171,10 @@
       <!-- 추천 이벤트  -->
       <section class="promotion">
         <div class="inner">
+          <div class="section-top">
+            <h2>오늘의 픽</h2>
+            <p>인터파크에서 할인혜택을 꼭 챙기세요.</p>
+          </div>
           <div class="promotion-slide">
             <button class="sw-bt sw-prev">이전</button>
             <button class="sw-bt sw-next">다음</button>
@@ -212,7 +218,7 @@
       <!-- Initialize Swiper -->
       <script>
         var swiper = new Swiper(".sw-promotion", {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 24,
           speed: 1000,
           loop: true,
@@ -224,6 +230,12 @@
           navigation: {
             nextEl: ".promotion .sw-next",
             prevEl: ".promotion .sw-prev",
+          },
+
+          breakpoints: {
+            760: {
+              slidesPerView: 2,
+            },
           },
         });
       </script>
