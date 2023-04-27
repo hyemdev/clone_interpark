@@ -61,7 +61,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .inner {
+    padding: 0 20px;
+    padding-bottom: 20px;
+
     max-width: 760px;
+    border-bottom: 8px solid rgba(0, 0, 0, 0.1);
   }
 }
 @media screen and (max-width: 760px) {
@@ -126,6 +130,13 @@ body {
   transform: scaleX(-100%);
 }
 
+/* 스와이프 버튼 없애기 */
+@media screen and (max-width: 1024px) {
+  .sw-bt {
+    display: none;
+  }
+}
+
 /* section 내용 구조 */
 
 .wrap > section {
@@ -152,7 +163,7 @@ body {
 .section-top .btns {
   /* inline-block은 html코드의 ENTER도 글자로 인식해서 공백글자가 들어간다. */
   /* 그래서 의미없는 공백을 없애기 위해 font size를 0으로 지정한다 */
-  font-size: 0;
+  font-size: 0;  
   margin: 25px 0;
 }
 
@@ -238,6 +249,14 @@ body {
     font-size: 15px;
     line-height: 18px;
   }
+  .bt-link-shop {
+    width: calc(100% - 20px - 20px);
+    display: block;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 48px;
+    border-radius: 5px;
+  }
 }
 @media screen and (max-width: 760px) {
   .wrap > section {
@@ -307,6 +326,7 @@ body {
   }
 }
 
+/* 플라잉 마이페이지 */
 .fix-mypage {
   display: none;
   position: fixed;
@@ -342,7 +362,7 @@ body {
   float: left;
   margin-right: 40px;
 }
-.fix-mypage-list li::after {
+.fix-mypage-list li:last-child {
   margin-right: 0;
 }
 
@@ -360,7 +380,7 @@ body {
 
 @media screen and (max-width: 1024px) {
   .fix-mypage {
-    display: block;
+    display: none;
   }
 }
 /* 기본레이아웃 */
@@ -373,7 +393,6 @@ body {
 
   /* 아래테두리만 그리기 */
   /* border-bottom: 1px solid #ebebeb; -보다 rgba를 이용하자 */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 .header .inner {
   /* 마진을 사용하면 오류가 생길 수 있음 */
@@ -640,7 +659,6 @@ body {
   .header .inner {
     padding-top: 15px;
     height: 230px;
-    border-bottom: 8px solid #f0f4f4;
   }
   /* 서치창 중앙정렬을 위해 너비100%설정 */
   .header-left {
@@ -747,7 +765,6 @@ body {
   }
   .promotion .inner {
     height: 300px;
-    border-bottom: 8px solid #f0f4f4;
   }
   .promotion .section-top {
     display: block;
@@ -814,7 +831,7 @@ body {
 }
 
 .shopping .section-slide {
-  height: 405px;
+  /* height: 405px; */
 }
 .sw-shopping {
   height: 100%;
@@ -852,6 +869,7 @@ body {
   line-height: 24px;
   color: #111;
   font-weight: 700;
+  white-space: nowrap;
 }
 .good-info-list li b span {
   color: #ef2e43;
@@ -880,7 +898,47 @@ body {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 1024px) {
+  .good-info {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .good-info-list li b {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .good-info {
+    padding: 10px;
+  }
+  .section-top .btns {
+    margin: 15px 0;
+    white-space: nowrap;
+    margin-right: 10px;
+    overflow: hidden;
+  }
+  .section-top .btns a {
+    line-height: 32px;
+    padding: 0 14px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .good-info-list li b {
+    font-size: 12px;
+    line-height: 28px;
+  }
+  .good-info-list li p {
+    font-size: 13px;
+    line-height: 16px;
+    height: 32px;
+  }
+  .good-info {
+    padding: 5px;
+  }
+}
 /* 투어특가 */
 .tour {
 }
