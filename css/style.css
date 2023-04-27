@@ -537,11 +537,12 @@ body {
 /* header 반응형 적용 */
 @media screen and (max-width: 1024px) {
   .header {
-    border-bottom: 8px solid #f0f4f4;
+    border: none;
   }
   .header .inner {
     padding-top: 15px;
     height: 230px;
+    border-bottom: 8px solid #f0f4f4;
   }
   /* 서치창 중앙정렬을 위해 너비100%설정 */
   .header-left {
@@ -630,33 +631,85 @@ body {
   width: 100%;
   height: auto;
 }
+
+.sw-promotion-control {
+  position: relative;
+  display: none;
+  text-align: center;
+}
+.sw-promotion-pg {
+  display: inline-block;
+}
 /* 추천이벤트 반응형 적용 */
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 1280px) {
   .promotion .inner {
     height: 275px;
   }
 }
 @media screen and (max-width: 1024px) {
   .promotion {
-    border-bottom: 8px solid #f0f4f4;
   }
   .promotion .inner {
-    height: 200px;
+    height: 300px;
+    border-bottom: 8px solid #f0f4f4;
   }
   .promotion .section-top {
     display: block;
   }
-  .sw-prom .promotion .sw-bt {
+  .promotion .sw-bt {
     display: none;
+  }
+  .sw-promotion-control {
+    display: block;
+  }
+  /* swiper.js에서 자동으로 css 생성 */
+  /* 변경하고싶은 디자인으로 덮어쓴다 */
+  .sw-promotion-pg .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 0.2;
+    background: #000;
+  }
+  .sw-promotion-pg .swiper-pagination-bullet-active {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 1;
+    background: #000;
   }
 }
 
 @media screen and (max-width: 760px) {
   .promotion .inner {
-    height: 190px;
+    height: 290px;
   }
+
   .sw-promotion {
-    width: 280px;
+    /* 화면의 너비에 비해 줄어드는것은 ok */
+    /* but 일정 너비 이하로는 줄어들지 않았으면 좋겠다 */
+    width: 50%;
+    min-width: 350px;
+  }
+  .sw-promotion-control {
+    /* css에  position 지정필요 */
+    margin-top: -25px;
+    z-index: 999;
+  }
+  .sw-promotion-pg .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    opacity: 0.4;
+    background: #fff;
+    /* 너비가 변하는 애니메이션넣기 */
+    transition: width 0.5s;
+  }
+  .sw-promotion-pg .swiper-pagination-bullet-active {
+    width: 20px;
+    height: 6px;
+    opacity: 1;
+    background: #fff;
   }
 }
 

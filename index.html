@@ -178,6 +178,7 @@
           <div class="promotion-slide">
             <button class="sw-bt sw-prev">이전</button>
             <button class="sw-bt sw-next">다음</button>
+            <!-- promotion swiper -->
             <div class="swiper sw-promotion">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -212,6 +213,11 @@
                 </div>
               </div>
             </div>
+            <!-- pagination -->
+            <div class="sw-promotion-control">
+              <div class="pagination sw-promotion-pg"></div>
+            </div>
+            
           </div>
         </div>
       </section>
@@ -230,6 +236,10 @@
           navigation: {
             nextEl: ".promotion .sw-next",
             prevEl: ".promotion .sw-prev",
+          },
+          pagination: {
+            el: ".sw-promotion-pg",
+            clickable: true,
           },
 
           breakpoints: {
@@ -393,7 +403,7 @@
                     </div>
                     <div class="tour-info">
                       <ul class="tour-info-list">
-                        <li><span class="tour-cate">닥독특가</span></li>
+                        <li><span class="tour-cate">단독특가</span></li>
                         <li>
                           <span class="tour-title"
                             >나이아가라 혼블라워호 / 자유의 여신상 유람선
