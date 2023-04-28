@@ -1190,6 +1190,9 @@ body {
   }
 }
 @media screen and (max-width: 1024px) {
+  .sw-ticket .swiper-slide {
+    width: 150px;
+  }
   .ticket-rank {
     font-size: 38px;
     line-height: 45px;
