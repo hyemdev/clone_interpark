@@ -236,7 +236,7 @@ body {
 @media screen and (max-width: 1024px) {
   .wrap > section {
     padding-top: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
   }
   .section-top {
   }
@@ -259,7 +259,6 @@ body {
 }
 @media screen and (max-width: 760px) {
   .wrap > section {
-    padding-bottom: 30px;
   }
   .section-top {
   }
@@ -389,6 +388,7 @@ body {
 /* 상단 */
 .header {
   z-index: 999999;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   /* 아래테두리만 그리기 */
   /* border-bottom: 1px solid #ebebeb; -보다 rgba를 이용하자 */
@@ -1629,8 +1629,6 @@ body {
 /* 하단 */
 
 .footer {
-  padding-top: 30px;
-  padding-bottom: 90px;
 }
 
 .footer-menu {
