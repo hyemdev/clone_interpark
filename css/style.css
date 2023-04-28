@@ -1399,6 +1399,7 @@ body {
   .live .section-slide {
     height: 285px;
   }
+
   .live-info {
     padding: 12px;
   }
@@ -1491,7 +1492,12 @@ body {
 }
 
 .books .section-slide {
-  height: 400px;
+  /* 스와이퍼 때문에 높이를 없애보자 */
+  /* height: 400px; */
+}
+
+.books .section-slide .sw-bt {
+  top: 41%;
 }
 .sw-books {
   height: 100%;
@@ -1543,6 +1549,40 @@ body {
 .books .section-bottom {
 }
 
+@media screen and (max-width: 1280px) {
+  .books .section-slide .sw-bt {
+    top: 44%;
+  }
+
+  .books-img {
+    height: 457px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .books-img {
+    height: 322px;
+  }
+
+  .books-info-title {
+    font-size: 13px;
+    line-height: 15px;
+    margin: 4px 0;
+  }
+  .books-info-price {
+    font-size: 14px;
+  }
+  .books-info-price em {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  /* 이부분은 width대로 height가 변하니까 vw를 쓰자 */
+  .books-img {
+    height: 41.6vw;
+    /* min-width: 145px; */
+  }
+}
 /* 할인이벤트 */
 .event {
 }
