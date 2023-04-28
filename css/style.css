@@ -1614,6 +1614,12 @@ body {
   mix-blend-mode: multiply;
 }
 
+@media screen and (max-width: 1024px) {
+  .event {
+    display: none;
+  }
+}
+
 .event .swiper-slide {
 }
 
