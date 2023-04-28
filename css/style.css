@@ -1084,6 +1084,9 @@ body {
   top: 40%;
 }
 
+.ticket .inner {
+  overflow: hidden;
+}
 .sw-ticket {
   height: 100%;
 }
@@ -1624,6 +1627,7 @@ body {
 }
 
 /* 하단 */
+
 .footer {
   padding-top: 30px;
   padding-bottom: 90px;
@@ -1692,6 +1696,7 @@ body {
   background: #fff;
   box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  z-index: 9;
 }
 
 .footer-menu-list > li:hover .more-list {
@@ -1781,9 +1786,100 @@ body {
   line-height: 18px;
   color: rgba(0, 0, 0, 0.4);
 }
-
 .copy {
   font-size: 11px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.4);
+}
+.footer-mobile {
+  display: none;
+}
+.footer-mobile .inner {
+  background: #fafafa;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-mobile-menu {
+}
+.footer-mobile-menu a,
+.footer-mobile-info a {
+  position: relative;
+  /* 위에 text-align을 주었으므로 inline-block처리 */
+  display: inline-block;
+  padding: 0 8px;
+  font-size: 11px;
+  color: #333;
+  margin-bottom: 6px;
+}
+.footer-mobile-menu a strong,
+.footer-mobile-info a strong {
+  font-weight: 700;
+}
+.a-line::before {
+  content: "";
+  /* position absolute를 사용한 위치조정 */
+  position: absolute;
+  right: 0;
+  top: -2px;
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background: #afafaf;
+}
+
+.a-more::after {
+  content: "";
+  /* position absolute를 사용한 위치조정 */
+  position: absolute;
+  right: -5px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background: url("../images/footer_arrow.svg") no-repeat center;
+}
+
+.footer-mobile-info > .a-line::before {
+  right: -20px;
+}
+.footer-mobile-info a:first-child {
+  margin-right: 20px;
+}
+
+.footer-mobile-info {
+  margin: 15px 0;
+}
+
+.footer-mobile-desc {
+  position: relative;
+  display: block;
+  padding: 0 15%;
+
+  display: inline-block;
+
+  margin-bottom: 85px;
+  font-size: 10px;
+  line-height: 14px;
+  word-wrap: keep-all;
+  color: #b2b2b2;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .footer-menu {
+    display: none;
+  }
+  .footer-main {
+    display: none;
+  }
+  .footer-mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 760px) {
 }
