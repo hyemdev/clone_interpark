@@ -263,7 +263,7 @@
       </section>
       <!-- Initialize Swiper -->
       <script>
-        var swiper = new Swiper(".sw-promotion", {
+        let promotionSwiper = new Swiper(".sw-promotion", {
           slidesPerView: 1,
           spaceBetween: 24,
           speed: 1000,
@@ -439,7 +439,7 @@
             </div>
             <!-- Shopping Swiper -->
             <script>
-              new Swiper(".sw-shopping", {
+              let shoppingSwiper = new Swiper(".sw-shopping", {
                 slidesPerView: 5,
                 grid: {
                   rows: 2,
@@ -656,7 +656,7 @@
               </div>
             </div>
             <script>
-              new Swiper(".sw-tour", {
+              let tourSwiper = new Swiper(".sw-tour", {
                 slidesPerView: 3,
                 grid: {
                   rows: 2,
@@ -852,7 +852,7 @@
               </div>
             </div>
             <script>
-              new Swiper(".sw-ticket", {
+              let ticketSwiper = new Swiper(".sw-ticket", {
                 slidesPerView: "auto",
                 spaceBetween: 10,
                 breakpoints: {
@@ -1004,7 +1004,7 @@
               </div>
             </div>
             <script>
-              new Swiper(".sw-live", {
+              let liveSwiper = new Swiper(".sw-live", {
                 slidesPerView: 4,
                 spaceBetween: 10,
                 breakpoints: {
@@ -1164,7 +1164,7 @@
               </div>
             </div>
             <script>
-              new Swiper(".sw-books", {
+              let bookSwiper = new Swiper(".sw-books", {
                 slidesPerView: 3,
                 grid: {
                   rows: 4,
@@ -1236,7 +1236,7 @@
             </div>
           </div>
           <script>
-            new Swiper(".sw-event", {
+            let eventSwiper = new Swiper(".sw-event", {
               slidesPerView: 3,
               spaceBetween: 27,
               breakpoints: {
@@ -1423,12 +1423,21 @@
             </div>
             <div class="footer-mobile-info">
               <a href="#" class="a-line a-more"
-                ><strong>(주)인터파크</strong>사업자정보</a>
+                ><strong>(주)인터파크</strong>사업자정보</a
+              >
               <a href="#" class="a-more"
                 ><strong>(주)인터파크커머스</strong>사업자정보
               </a>
             </div>
-            <div class="footer-mobile-desc">(주)인터파크는 인터파크티켓, 인터파크투어의 통신판매중개자로서 통신판매의 당사자가 아니므로, 개별 판매자가 등록한 오픈마켓 상품에 대해서 주식회사 인터파크는 일체 책임을 지지 않습니다. (주)인터파크커머스는 인터파크쇼핑, 인터파크도서의 통신판매중개자로서 통신판매의 당사자가 아니므로, 개별 판매자가 등록한 오픈마켓 상품에 대해서 주식회사 인터파크커머스는 일체 책임을 지지 않습니다.</div>
+            <div class="footer-mobile-desc">
+              (주)인터파크는 인터파크티켓, 인터파크투어의 통신판매중개자로서
+              통신판매의 당사자가 아니므로, 개별 판매자가 등록한 오픈마켓 상품에
+              대해서 주식회사 인터파크는 일체 책임을 지지 않습니다.
+              (주)인터파크커머스는 인터파크쇼핑, 인터파크도서의
+              통신판매중개자로서 통신판매의 당사자가 아니므로, 개별 판매자가
+              등록한 오픈마켓 상품에 대해서 주식회사 인터파크커머스는 일체
+              책임을 지지 않습니다.
+            </div>
           </div>
         </div>
       </footer>
