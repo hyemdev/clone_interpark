@@ -69,6 +69,10 @@ window.onload = function () {
         },
       },
     },
+    navigation: {
+      nextEl: ".shopping .sw-next",
+      prevEl: ".shopping .sw-prev",
+    },
   });
 
   // 투어 스와이퍼
@@ -99,6 +103,10 @@ window.onload = function () {
         },
       },
     },
+    navigation: {
+      nextEl: ".tour .sw-next",
+      prevEl: ".tour .sw-prev",
+    },
   });
 
   // 티켓 스와이퍼
@@ -115,6 +123,10 @@ window.onload = function () {
         slidesPerView: 4,
       },
     },
+    navigation: {
+      nextEl: ".ticket .sw-next",
+      prevEl: ".ticket .sw-prev",
+    },
   });
 
   // 라이브 스와이퍼
@@ -130,6 +142,10 @@ window.onload = function () {
         slidesPerView: 4,
         spaceBetween: 27,
       },
+    },
+    navigation: {
+      nextEl: ".live .sw-next",
+      prevEl: ".live .sw-prev",
     },
   });
 
@@ -159,6 +175,10 @@ window.onload = function () {
         },
       },
     },
+    navigation: {
+      nextEl: ".books .sw-next",
+      prevEl: ".books .sw-prev",
+    },
   });
 
   // 이벤트 스와이퍼
@@ -169,6 +189,10 @@ window.onload = function () {
       1280: {
         slidesPerView: 4,
       },
+    },
+    navigation: {
+      nextEl: ".event .sw-next",
+      prevEl: ".event .sw-prev",
     },
   });
 };
