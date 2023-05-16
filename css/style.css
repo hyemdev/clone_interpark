@@ -106,7 +106,7 @@ body {
   right: 0;
   /* 버튼 중앙에 위치하기 */
   transform: translate(50%, -50%);
-  z-index: 99;
+  z-index: 999;
 }
 
 .sw-prev {
@@ -115,7 +115,7 @@ body {
   left: 0;
   /* 버튼 중앙에 위치하기 */
   transform: translate(-50%, -50%);
-  z-index: 99;
+  z-index: 999;
 }
 .sw-bt::before {
   display: block;
@@ -435,7 +435,6 @@ body {
   background-size: contain;
 }
 
-
 /* 서치 폼 설정 */
 .search {
   position: absolute;
@@ -564,7 +563,6 @@ body {
   /* 박스 그림자 넣기 */
   box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.2);
 
-  
   /* transition 적용 */
   /* display:none;은 사용못함. 대신에 visibility: hidden;를 쓴다. */
   visibility: hidden;
@@ -1644,10 +1642,9 @@ body {
 /* 하단 */
 
 .footer {
-position: relative;
-z-index: 99;
+  position: relative;
+  z-index: 99;
 }
-
 
 .footer-menu {
   border-top: 1px solid #e5e5e5;
