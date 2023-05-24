@@ -40,6 +40,35 @@ body {
   word-break: keep-all;
 }
 
+/* 클론코드 안내창 */
+.modal {
+  position: fixed;
+  left: 0px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999999;
+}
+.modal-cont {
+  width: 500px;
+  padding: 80px 0;
+  height: 300px;
+  border-radius: 20px;
+  background: white;
+  display: inline-block;
+  line-height: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+.modal-active {
+  overflow: hidden !important;
+}
+
+
 /* 공통클래스 */
 .inner {
   display: block;
@@ -93,6 +122,7 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
   font-size: 0;
   cursor: pointer;
+  z-index: 999;
 }
 
 /* 슬라이드 양 끝 장에서는 버튼 사라지게 만들기 */
@@ -106,7 +136,6 @@ body {
   right: 0;
   /* 버튼 중앙에 위치하기 */
   transform: translate(50%, -50%);
-  z-index: 999;
 }
 
 .sw-prev {
@@ -115,7 +144,6 @@ body {
   left: 0;
   /* 버튼 중앙에 위치하기 */
   transform: translate(-50%, -50%);
-  z-index: 999;
 }
 .sw-bt::before {
   display: block;
@@ -267,6 +295,8 @@ body {
   .section-top {
   }
 }
+
+
 
 /* 우측하단 고정 광고 */
 /* html 플라잉 배너 */
@@ -1086,8 +1116,10 @@ body {
 /* 티켓랭킹 */
 .ticket {
 }
+
 .ticket .section-slide {
   /* height: 540px; */
+  position: relative;
 }
 
 .ticket .section-slide .sw-bt {
@@ -1098,7 +1130,7 @@ body {
 }
 
 .ticket .inner {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .sw-ticket {
   height: 100%;
@@ -1199,7 +1231,6 @@ body {
   border: 1px solid rgba(239, 62, 67, 0.3);
   border-radius: 3px;
 }
-
 @media screen and (max-width: 1280px) {
   .ticket-img img {
     transform: translate(-50%, -50%) scale(1);
